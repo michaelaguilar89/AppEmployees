@@ -1,1 +1,31 @@
-<p>list-employees works!</p>
+<div class="container text-center">
+    <div class="col-lg-10 col-md-10 col-sm-10  ">
+        <table class="table mt-3 table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">LastName</th>
+                <th scope="col">email</th>
+                <th scope="col">age</th>
+                <th scope="col">photo</th>
+                <th scope="col">actions</th>
+              </tr>
+            </thead>
+            <tbody *ngFor=" let employee of list">
+              <tr >
+                <td >{{employee.name}}</td>
+                <td >{{employee.lastName}}</td>
+                <td >{{employee.email}}</td>
+                <td >{{employee.age}}</td>
+                <td >  
+                    <img [src]="employee.photo" style="width: 80px;">
+                </td>
+                <td>
+                  <i class="fa-solid fa-pen-to-square fa-lg text-success mx-3 mt-4"></i>
+                  <i class="fa-solid fa-trash fa-lg text-danger"></i>
+                </td>
+              </tr>
+                        </tbody>
+          </table>
+    </div>
+</div>

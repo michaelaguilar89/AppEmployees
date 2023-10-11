@@ -7,6 +7,7 @@ import { ListEmployeesComponent } from './components/list-employees/list-employe
 import { CreateUpdateEmployeesComponent } from './components/create-update-employees/create-update-employees.component';
 import { DetailEmployeesComponent } from './components/detail-employees/detail-employees.component';
 import { HeaderComponent } from './components/header/header.component';
+import { EmployeesServiceService } from './services/employees-service.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EmployeesServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

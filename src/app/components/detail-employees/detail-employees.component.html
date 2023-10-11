@@ -1,1 +1,18 @@
-<p>detail-employees works!</p>
+<div class="container ">
+    <div class="card mb-3 mt-3 text-center" style="max-width: 800px;"  >
+        <div class="row g-0">
+          <div class="col-md-4" >
+            <img [src]="employee.photo" style="max-width: 150px;" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Name : {{employee.name}}</h5>
+              <p class="card-text">Last Name : {{employee.lastName}}</p>
+              <p class="card-text">email : {{employee.email}}</p>
+              <p class="card-text">Age : {{employee.age}}</p>
+              <a routerLink="listEmployees">Go Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

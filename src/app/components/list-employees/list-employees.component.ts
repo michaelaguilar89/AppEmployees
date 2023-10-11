@@ -10,13 +10,14 @@ import { EmployeesServiceService } from 'src/app/services/employees-service.serv
 export class ListEmployeesComponent implements OnInit {
 
   list:any;
-
+  count:number=0;
 
   constructor(public service:EmployeesServiceService){}
 
   ngOnInit(){
    this.list= this.service.AllEmployees;
    console.log(this.list)
+   this.count=this.list.length;
   } 
 
   

@@ -1,5 +1,11 @@
-<div class="container text-center">
+<div class="container mx-auto">
     <div class="col-lg-10 col-md-10 col-sm-10  ">
+      <nav class="navbar mt-3 bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">List of Employees ( {{count}} )</span>
+          <a routerLink="/createEmployee">New</a>
+        </div>
+      </nav>
         <table class="table mt-3 table-striped">
             <thead>
               <tr>

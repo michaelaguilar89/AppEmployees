@@ -25,6 +25,10 @@ export class CreateUpdateEmployeesComponent implements OnInit {
       name:['',Validators.required],
       lastName:['',Validators.required],
       email:['',Validators.required],
+      companyName:['',Validators.required],
+      salary:['',Validators.required],
+      phoneNumber:['',Validators.required],
+      role:['',Validators.required],
       age:['',Validators.required],
       photo:['',Validators.required]
     })
@@ -39,6 +43,10 @@ export class CreateUpdateEmployeesComponent implements OnInit {
         this.form.patchValue({
           name:this.employee.name,
           lastName:this.employee.lastName,
+          companyName:this.employee.companyName,
+          salary:this.employee.salary,
+          phoneNumber:this.employee.faxNumber,
+          role:this.employee.role,
           age:this.employee.age,
           email:this.employee.email,
           photo:this.employee.photo
@@ -52,6 +60,10 @@ export class CreateUpdateEmployeesComponent implements OnInit {
           id:Number(this.id),
           name:String(this.form.get('name')?.value),
           lastName:String(this.form.get('lastName')?.value),
+          companyName:String(this.form.get('companyName')?.value),
+          salary:Number(this.form.get('salary')?.value),
+          phoneNumber:Number(this.form.get('faxNumber')?.value),
+          role:String(this.form.get('role')?.value),
           age: Number(this.form.get('age')?.value),
           email:String(this.form.get('email')?.value),
           photo:String(this.form.get('photo')?.value)
@@ -66,6 +78,10 @@ export class CreateUpdateEmployeesComponent implements OnInit {
           id:Number(this.service.list.length+1),
           name:String(this.form.get('name')?.value),
           lastName:String(this.form.get('lastName')?.value),
+          companyName:String(this.form.get('companyName')?.value),
+          salary:Number(this.form.get('salary')?.value),
+          phoneNumber:Number(this.form.get('faxNumber')?.value),
+          role:String(this.form.get('role')?.value),
           age: Number(this.form.get('age')?.value),
           email:String(this.form.get('email')?.value),
           photo:String(this.form.get('photo')?.value)

@@ -13,6 +13,10 @@
               <p class="card-text">Last Name : {{employee.lastName}}</p>
               <p class="card-text">email : {{employee.email}}</p>
               <p class="card-text">Age : {{employee.age}}</p>
+              <p class="card-text">Company : {{employee.companyName}}</p>
+              <p class="card-text">Phone : {{employee.phoneNumber}}</p>
+              <p class="card-text">Role : {{employee.role}}</p>
+              <p class="card-text">Salary : {{employee.salary | currency}}</p>
               <div class="card-footer">
                 <button type="button" class="btn btn-danger mx-3" *ngIf="title==='Remove Employee'" (click)="remove(employee.id)">Yes</button>
                 <button type="button" class="btn btn-secondary"  routerLink="listEmployees">Go Back</button>

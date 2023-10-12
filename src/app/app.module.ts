@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListEmployeesComponent } from './components/list-employees/list-employees.component';
@@ -8,6 +9,7 @@ import { CreateUpdateEmployeesComponent } from './components/create-update-emplo
 import { DetailEmployeesComponent } from './components/detail-employees/detail-employees.component';
 import { HeaderComponent } from './components/header/header.component';
 import { EmployeesServiceService } from './services/employees-service.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,7 @@ import { EmployeesServiceService } from './services/employees-service.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,ReactiveFormsModule
   ],
   providers: [EmployeesServiceService],
   bootstrap: [AppComponent]

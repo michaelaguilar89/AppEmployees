@@ -5,7 +5,7 @@ export interface EmployeesModel {
     age?:number;
     companyName?:string;
     salary?:number;
-    phoneNumber?:number;
+    phoneNumber?:string;
     role?:string;
     email?:string;
     photo?:string;

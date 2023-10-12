@@ -1,5 +1,5 @@
-<div class="container mx-auto">
-    <div class="col-lg-10 col-md-10 col-sm-10  ">
+<div class="container ">
+    <div class="col-lg-10 col-md-10 col-sm-10  mx-auto ">
       <nav class="navbar mt-3 bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
           <span class="navbar-brand mb-0 h1">List of Employees ( {{count}} )</span>
@@ -28,9 +28,10 @@
                 </td>
                 <td>
                                 
-                  <i [routerLink]="['/editEmployee/',employee.id]" class="fa-solid fa-pen-to-square fa-lg text-success mx-3 mt-4"></i>
+                  <i [routerLink]="['/editEmployee/',employee.id]" class="fa-solid fa-pen-to-square fa-lg text-success mx-3 mt-4"
+                  style="cursor: pointer;"></i>
                   
-                  <i class="fa-solid fa-trash fa-lg text-danger"></i>
+                  <i class="fa-solid fa-trash fa-lg text-danger" (click)="remove(employee.id)" style="cursor: pointer;"></i>
                 </td>
               </tr>
                         </tbody>

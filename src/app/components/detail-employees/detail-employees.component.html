@@ -1,6 +1,8 @@
 <div class="container ">
-    <div class="card mb-3 mt-3 text-center" style="max-width: 800px;"  >
-        <h4>Employee Details</h4>
+    <div class="card mb-3 mt-3 mx-auto col-lg-6 col-md-6 col-sm-8"  >
+        <div class="card-header">
+          <h4 class="offset-4">{{title}}</h4>
+        </div>
         <div class="row g-0">
           <div class="col-md-4" >
             <img [src]="employee.photo" style="max-width: 150px;" class="img-fluid rounded-start" alt="...">
@@ -11,7 +13,10 @@
               <p class="card-text">Last Name : {{employee.lastName}}</p>
               <p class="card-text">email : {{employee.email}}</p>
               <p class="card-text">Age : {{employee.age}}</p>
-              <a routerLink="listEmployees">Go Back</a>
+              <div class="card-footer">
+                <button type="button" class="btn btn-danger mx-3" *ngIf="title==='Remove Employee'" (click)="remove(employee.id)">Yes</button>
+                <button type="button" class="btn btn-secondary"  routerLink="listEmployees">Go Back</button>
+              </div>
             </div>
           </div>
         </div>

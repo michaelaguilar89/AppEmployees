@@ -27,7 +27,9 @@
                     <img [src]="employee.photo" style="width: 80px;">
                 </td>
                 <td>
-                  <i class="fa-solid fa-pen-to-square fa-lg text-success mx-3 mt-4"></i>
+                                
+                  <i [routerLink]="['/editEmployee/',employee.id]" class="fa-solid fa-pen-to-square fa-lg text-success mx-3 mt-4"></i>
+                  
                   <i class="fa-solid fa-trash fa-lg text-danger"></i>
                 </td>
               </tr>

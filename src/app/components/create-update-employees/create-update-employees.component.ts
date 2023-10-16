@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { FormGroup,Validators,FormControl,FormBuilder} from '@angular/forms';
+import { FormGroup,Validators,FormControl,FormBuilder, EmailValidator} from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { EmployeesModel } from 'src/app/models/employees-model';
@@ -14,7 +14,9 @@ export class CreateUpdateEmployeesComponent implements OnInit {
     title='Create Employee';
     buttonTitle='Save';
     employee:any;
-    constructor(private fb:FormBuilder,
+    name='';
+    lastName='';
+    constructor(public fb:FormBuilder,
                 private service:EmployeesServiceService,
                 private route:Router,
                 private actived:ActivatedRoute
@@ -22,14 +24,14 @@ export class CreateUpdateEmployeesComponent implements OnInit {
 
     }
     form= this.fb.group({
-      name:['',Validators.required],
-      lastName:['',Validators.required],
-      email:['',Validators.required],
-      companyName:['',Validators.required],
-      salary:['',Validators.required],
-      phoneNumber:['',Validators.required],
-      role:['',Validators.required],
-      age:['',Validators.required],
+      name:['',[Validators.required,Validators.minLength(5),Validators.maxLength(20)]],
+      lastName:['',[Validators.required,Validators.minLength(3),Validators.maxLength(30)]],
+      email:['',[Validators.required,Validators.email]],
+      companyName:['',[Validators.required,Validators.minLength(4),Validators.maxLength(30)]],
+      salary:['',[Validators.required,Validators.pattern(('^[0-9]*$'))]],
+      phoneNumber:['',[Validators.required,Validators.minLength(8),Validators.maxLength(30)]],
+      role:['',[Validators.required,Validators.minLength(3),Validators.maxLength(30)]],
+      age:['',[Validators.required,Validators.maxLength(3)]],
       photo:['',Validators.required]
     })
 
@@ -87,6 +89,7 @@ export class CreateUpdateEmployeesComponent implements OnInit {
           photo:String(this.form.get('photo')?.value)
         }
   
+        console.log('formdata : '+this.form.value);
         console.log(employee);
         this.service.createEmployee(employee);
   

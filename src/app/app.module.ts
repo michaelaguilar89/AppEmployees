@@ -12,6 +12,7 @@ import { EmployeesServiceService } from './services/employees-service.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { RegisterComponent } from './components/register/register.component';
     BrowserModule,
     AppRoutingModule,ReactiveFormsModule
   ],
-  providers: [EmployeesServiceService],
+  providers: [EmployeesServiceService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 mx-auto">
+            <form [formGroup]="form"  (ngSubmit)="login()" class="mt-5">
+                <div class="form-floating mb-3">
+                    <input type="email" formControlName="username" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">UserName</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <div class="form-floating mt-4">
+                   <button type="submit" class="btn btn-lg btn-success">Login</button>
+                   
+                
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

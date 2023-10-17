@@ -10,6 +10,8 @@ import { DetailEmployeesComponent } from './components/detail-employees/detail-e
 import { HeaderComponent } from './components/header/header.component';
 import { EmployeesServiceService } from './services/employees-service.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListEmployeesComponent,
     CreateUpdateEmployeesComponent,
     DetailEmployeesComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

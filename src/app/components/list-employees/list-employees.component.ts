@@ -29,7 +29,7 @@ export class ListEmployeesComponent implements OnInit {
   }
   getDetails(){
     this.service.title='Employee Details' 
-   // this.route.navigate(['/editEmployee/',id]);
+   
   }
 
   

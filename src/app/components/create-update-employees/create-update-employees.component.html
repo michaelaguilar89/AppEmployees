@@ -41,10 +41,11 @@
                   </div>
                   <div class="mb-3">
                     <label for="input-age" class="form-label">Age</label>
-                    <input type="number"  formControlName="age" class="form-control" id="input-age" aria-describedby="emailHelp">
+                    <input type="number" maxlength=""  formControlName="age" class="form-control" id="input-age" aria-describedby="emailHelp">
                     <span class="validation" *ngIf="this.form.get('age')?.touched && this.form.get('age')?.errors?.['required']">
-                      (El age es required)
+                      (El age es required, solo acepta 3 digitos numericos)
                     </span>
+                    
                     
                         
                   </div>

@@ -19,7 +19,7 @@
             </thead>
             <tbody *ngFor=" let employee of list">
               <tr >
-                <td ><a  [routerLink]="['/detailsEmployee/',employee.id]">{{employee.name}} </a></td>
+                <td ><a  (click)="getDetails()" [routerLink]="['/detailsEmployee/',employee.id]">{{employee.name}} </a></td>
                 <td >{{employee.lastName}}</td>
                 <td >{{employee.email}}</td>
                 <td >{{employee.age}}</td>
@@ -28,7 +28,7 @@
                 </td>
                 <td>
                                 
-                  <i [routerLink]="['/editEmployee/',employee.id]" class="fa-solid fa-pen-to-square fa-lg text-success mx-3 mt-4"
+                  <i [routerLink]="['/editEmployee/',employee.id]"  class="fa-solid fa-pen-to-square fa-lg text-success mx-3 mt-4"
                   style="cursor: pointer;"></i>
                   
                   <i class="fa-solid fa-trash fa-lg text-danger" (click)="remove(employee.id)" style="cursor: pointer;"></i>

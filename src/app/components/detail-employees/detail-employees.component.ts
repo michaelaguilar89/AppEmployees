@@ -24,6 +24,7 @@ export class DetailEmployeesComponent implements OnInit {
     var myId=Number(id);
     this.employee= this.service.getEmployeeDetail(myId);
     this.title=this.service.title;
+    console.log(this.title);
     console.log(this.employee);
   }
 

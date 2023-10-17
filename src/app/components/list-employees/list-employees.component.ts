@@ -27,6 +27,10 @@ export class ListEmployeesComponent implements OnInit {
     this.route.navigate(['/removeEmployee/',id]);
        
   }
+  getDetails(){
+    this.service.title='Employee Details' 
+   // this.route.navigate(['/editEmployee/',id]);
+  }
 
   
 

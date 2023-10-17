@@ -6,7 +6,7 @@ import { EmployeesModel } from '../models/employees-model';
 })
 export class EmployeesServiceService {
 
-    title='Employee Details';
+    public title='Employee Details';
     list:EmployeesModel[]=[
     { id:1,name:'Pedro',lastName:'Venavidez',companyName:'Coca-Cola Company',phoneNumber:'50645569863',role:'Administrator',salary:3000,age:40,email:'pedro48@email.com',photo:'https://cdn-icons-png.flaticon.com/512/5556/5556512.png'},
     { id:2,name:'Jualiana',lastName:'Velasquez',companyName:'Fanta-Cola Company',phoneNumber:'50645569863',role:'Administrator',salary:3000,age:30,email:'juliana8@email.com',photo:'https://img.freepik.com/vector-premium/vector-caracteres-icono-cara-feliz-avatar-mujer-sonriente-3d_313242-1220.jpg'},

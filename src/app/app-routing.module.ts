@@ -8,10 +8,10 @@ import { GuardUserGuard } from './services/guard-user.guard';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { 'path':'listEmployees',component:ListEmployeesComponent },
+  { 'path':'listEmployees',canActivate:[GuardUserGuard],component:ListEmployeesComponent },
   { 'path':'createEmployee',canActivate:[GuardUserGuard],component:CreateUpdateEmployeesComponent},
   { 'path':'editEmployee/:id',canActivate:[GuardUserGuard],component:CreateUpdateEmployeesComponent},
-  { 'path':'detailsEmployee/:id',component:DetailEmployeesComponent},
+  { 'path':'detailsEmployee/:id',canActivate:[GuardUserGuard],component:DetailEmployeesComponent},
   { 'path':'removeEmployee/:id',canActivate:[GuardUserGuard],component:DetailEmployeesComponent},
   { 'path':'login',component:LoginComponent},
   { 'path':'home',canActivate:[GuardUserGuard],component:HomeComponent},

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, NgModel, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -10,10 +10,11 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent {
 
+showTest:boolean=false;  
 response:any;
 form:FormGroup;
 showMessage=false;
-
+text='Show test data';
 constructor(private fb:FormBuilder, private auth:AuthService,private router:Router){
   this.form=this.fb.group({
     username:['',[Validators.required]],
@@ -43,4 +44,24 @@ hideMessage()
     this.router.navigate(['/home']);
    }
   }
+
+  action(){
+    if(this.text==='Show test data'){
+      this.show();
+    }else{
+      this.hide();
+    }
+  }
+
+  hide(){
+    this.showTest=false;
+    this.text='Show test data';
+  }
+  show(){
+       
+   
+    this.showTest=true;
+    this.text='Hide test data';
+  }
+
 }

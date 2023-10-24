@@ -1,16 +1,19 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8-offset-1 text-center " >
-            <div class="card mt-5" >
-                <div class="col-4"><img [src]="myUser.photo" class="card-img-top" alt="..." style="max-width: 200px;">
-                </div>
-                <div class="col-8">
+            <div class="card mb-3 mx-auto mt-5" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img [src]="myUser.photo" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
                     <div class="card-body">
-                        <p class="card-text">UserName :  {{myUser.username}}</p>
-                        <p class="card-text">Role :  {{myUser.role}}</p>
-                      </div>
+                      <h5 class="card-title">Welcome</h5>
+                      <p class="card-text"> {{myUser.username}}</p>
+                      <p class="card-text"><small class="text-muted">Role : {{myUser.role}}</small></p>
+                    </div>
+                  </div>
                 </div>
-                 
               </div>
     </div>
 </div>

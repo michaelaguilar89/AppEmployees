@@ -9,20 +9,20 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-    myUser:any;
+    myUser:any|null;
     userData:any;
     id:any;
+    username:any;
+    role:any;
+    photo:any;
 
     constructor(private auth:AuthService){
       
     }
     ngOnInit(): void {
-      this.myUser=this.auth.getCurrentUser();
-      console.log('myUser :   '+this.myUser);
-       this.id=Number(this.myUser.id);
-        console.log('id : '+this.id);
-        this.userData=this.auth.getUserById(this.id);
-        console.log(this.userData)
+      this.myUser=this.auth.getCurrentUser()
+      console.log(this.myUser);
+    
         
     }
 

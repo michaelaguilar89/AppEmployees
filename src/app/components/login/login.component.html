@@ -1,14 +1,33 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 mx-auto">
+        <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+
+            <div class="toast show mt-5 " *ngIf="showMessage">
+                <div class="toast-header">
+                  <strong class="me-auto text-danger">Alert!</strong>
+                  <button type="button" (click)="hideMessage()" class="btn-close" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body">
+                  <p>User or password incorrect</p>
+                </div>
+              </div>
+           
+
+            <h3 class="card-title text-center mt-3">Login</h3>
             <form [formGroup]="form"  (ngSubmit)="login()" class="mt-5">
                 <div class="form-floating mb-3">
-                    <input type="email" formControlName="username" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <input type="email" autocomplete="off" formControlName="username" class="form-control" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput">UserName</label>
+                    <span class="mt-3 text-danger" *ngIf="this.form.get('username')?.touched && this.form.get('username')?.errors?.['required']">
+                        (This field is required)
+                    </span>
                   </div>
                   <div class="form-floating">
-                    <input type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <input type="password" autocomplete="off" formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Password</label>
+                    <span class="mt-3 text-danger "*ngIf="this.form.get('password')?.touched && this.form.get('password')?.errors?.['required']">
+                        (This field is required)
+                    </span>
                   </div>
                   <div class="form-floating mt-4">
                    <button type="submit" class="btn btn-lg btn-success">Login</button>

@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthService } from './services/auth.service';
+import { GuardUserGuard } from './services/guard-user.guard';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,14 @@ import { AuthService } from './services/auth.service';
     DetailEmployeesComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,ReactiveFormsModule
   ],
-  providers: [EmployeesServiceService,AuthService],
+  providers: [EmployeesServiceService,AuthService,GuardUserGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
